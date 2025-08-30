@@ -1,0 +1,56 @@
+[
+  {
+    "ts": "2025-08-30 19:41:42",
+    "session_id": "20250830-194142",
+    "uut_id": "DEMO-123",
+    "name": "ping",
+    "status": "OK",
+    "output": "pong",
+    "error": null
+  },
+  {
+    "ts": "2025-08-30 19:41:42",
+    "session_id": "20250830-194142",
+    "uut_id": "DEMO-123",
+    "name": "read_voltage",
+    "status": "OK",
+    "output": "12.622",
+    "error": null
+  },
+  {
+    "ts": "2025-08-30 19:41:42",
+    "session_id": "20250830-194142",
+    "uut_id": "DEMO-123",
+    "name": "read_temperature",
+    "status": "OK",
+    "output": "25.28",
+    "error": null
+  },
+  {
+    "ts": "2025-08-30 19:41:42",
+    "session_id": "20250830-194142",
+    "uut_id": "DEMO-123",
+    "name": "read_current",
+    "status": "OK",
+    "output": "0.805",
+    "error": null
+  },
+  {
+    "ts": "2025-08-30 19:41:42",
+    "session_id": "20250830-194142",
+    "uut_id": "DEMO-123",
+    "name": "read_status",
+    "status": "OK",
+    "output": "uptime=0.0s",
+    "error": null
+  },
+  {
+    "ts": "2025-08-30 19:41:42",
+    "session_id": "20250830-194142",
+    "uut_id": "DEMO-123",
+    "name": "reset_device",
+    "status": "OK",
+    "output": "reset",
+    "error": null
+  }
+]

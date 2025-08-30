@@ -1,0 +1,7 @@
+# live log session=20250830-194125 uut=UUT-001
+{"ts": "2025-08-30 19:41:25", "session_id": "20250830-194125", "uut_id": "UUT-001", "name": "ping", "status": "OK", "output": "pong", "error": null}
+{"ts": "2025-08-30 19:41:25", "session_id": "20250830-194125", "uut_id": "UUT-001", "name": "read_voltage", "status": "OK", "output": "12.729", "error": null}
+{"ts": "2025-08-30 19:41:25", "session_id": "20250830-194125", "uut_id": "UUT-001", "name": "read_temperature", "status": "OK", "output": "25.73", "error": null}
+{"ts": "2025-08-30 19:41:25", "session_id": "20250830-194125", "uut_id": "UUT-001", "name": "read_current", "status": "OK", "output": "1.153", "error": null}
+{"ts": "2025-08-30 19:41:25", "session_id": "20250830-194125", "uut_id": "UUT-001", "name": "read_status", "status": "OK", "output": "uptime=0.0s", "error": null}
+{"ts": "2025-08-30 19:41:25", "session_id": "20250830-194125", "uut_id": "UUT-001", "name": "reset_device", "status": "OK", "output": "reset", "error": null}

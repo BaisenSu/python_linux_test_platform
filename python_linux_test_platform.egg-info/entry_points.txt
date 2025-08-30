@@ -1,0 +1,4 @@
+[console_scripts]
+botdiags = test_framework.shell_cli:main
+botdiags-runner = test_framework.runner_cli:main
+demo-showcase = test_framework.demo_showcase:main

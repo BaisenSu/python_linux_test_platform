@@ -1,0 +1,7 @@
+ts,session_id,uut_id,name,status,output,error
+2025-08-30 19:41:25,20250830-194125,UUT-001,ping,OK,pong,
+2025-08-30 19:41:25,20250830-194125,UUT-001,read_voltage,OK,12.729,
+2025-08-30 19:41:25,20250830-194125,UUT-001,read_temperature,OK,25.73,
+2025-08-30 19:41:25,20250830-194125,UUT-001,read_current,OK,1.153,
+2025-08-30 19:41:25,20250830-194125,UUT-001,read_status,OK,uptime=0.0s,
+2025-08-30 19:41:25,20250830-194125,UUT-001,reset_device,OK,reset,

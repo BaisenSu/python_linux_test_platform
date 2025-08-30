@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-linux-test-platform"
+version = "0.1.0"
+description = "A modern Linux/Python test automation platform with mock, serial, and SSH rough-in backends."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Baisen Su" }]
+dependencies = [
+  "pyserial>=3.5",
+  "rich>=13.0.0",
+  "paramiko>=3.4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "build>=1.2.1", "twine>=4.0.2"]
+
+# We explicitly list both packages to ensure backends/ is included.
+[tool.setuptools]
+packages = ["test_framework", "test_framework.backends"]
+
+[project.scripts]
+botdiags = "test_framework.shell_cli:main"
+botdiags-runner = "test_framework.runner_cli:main"
+demo-showcase = "test_framework.demo_showcase:main"
