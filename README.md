@@ -67,7 +67,7 @@ They validate:
     Backends are not unit-tested to avoid requiring hardware/hosts.
 
 ## Project Documentation
-- [SPEC.md](SPEC.md) — Software Requirements Specification
+- [SPECIFICATION.md](SPECIFICATION.md) — Software Requirements Specification
 - [ARCHITECTURE.md](ARCHITECTURE.md) — Modules & diagrams
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to work on this repo
 - [SECURITY.md](SECURITY.md) — Credentials & reporting
