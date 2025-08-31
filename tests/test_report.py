@@ -1,8 +1,8 @@
 import json, csv
-from test_framework.report import TestReport
+from test_framework.report import Report
 
 def test_report_records_and_exports(tmp_path):
-    r = TestReport(uut_id="UUT-XYZ", session_id="S1")
+    r = Report(uut_id="UUT-XYZ", session_id="S1")
     r.log_result("ping", "OK", output="pong")
     r.log_result("read_voltage", "ERROR", error="timeout")
 

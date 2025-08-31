@@ -2,7 +2,7 @@ from __future__ import annotations
 from typing import Dict, Any, List, Optional
 import csv, json, time, pathlib, os
 
-class TestReport:
+class Report:
     """In-memory log of test steps.
     - log_result(): append a step
     - export_artifacts(): write JSON + CSV

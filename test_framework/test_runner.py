@@ -3,7 +3,7 @@ import os
 from typing import Optional
 from .serial_talker import SerialTalker
 from .checkers import check_voltage_str, check_temperature_str, check_current_str
-from .report import TestReport
+from .report import Report
 
 def run_smoke_tests(
     *,
@@ -14,7 +14,7 @@ def run_smoke_tests(
 ):
     """Run a fixed sequence of tests using the given transport mode."""
     talker = SerialTalker(mode=mode, **talker_kwargs)
-    report = TestReport(uut_id=uut_id)
+    report = Report(uut_id=uut_id)
 
     # Prepare run directory + live log (tail -f friendly)
     out_dir = os.path.join(out_root, uut_id, report.session_id)

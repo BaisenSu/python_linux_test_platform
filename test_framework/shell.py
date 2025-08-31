@@ -8,7 +8,7 @@ except Exception:
     readline = None
 
 from .serial_talker import SerialTalker
-from .report import TestReport
+from .report import Report
 
 class BotDiagsShell:
     """Interactive diagnostic shell.
@@ -19,7 +19,7 @@ class BotDiagsShell:
 
     def __init__(self, *, mode: str = "mock", uut_id: Optional[str] = None, **talker_kwargs):
         self.talker = SerialTalker(mode=mode, **talker_kwargs)
-        self.report = TestReport(uut_id=uut_id)
+        self.report = Report(uut_id=uut_id)
         self.commands: Dict[str, Callable[[str], Tuple[str, str]]] = {
             "ping": lambda _: self.talker.ping(),
             "read_voltage": lambda _: self.talker.read_voltage(),
