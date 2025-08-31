@@ -71,3 +71,98 @@ They validate:
 - [ARCHITECTURE.md](ARCHITECTURE.md) — Modules & diagrams
 - [CONTRIBUTING.md](CONTRIBUTING.md) — How to work on this repo
 - [SECURITY.md](SECURITY.md) — Credentials & reporting
+
+🚀 Install & Run
+🪟 Windows (PowerShell)
+1) Clone
+    cd C:\Users\baise\Documents\Python_Projects
+    git clone https://github.com/BaisenSu/python_linux_test_platform.git
+    cd python_linux_test_platform
+
+2) Create venv (one time per machine)
+    python -m venv .venv
+
+3) Activate venv (every session)
+    .\.venv\Scripts\Activate
+
+If you see “running scripts is disabled”:
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    # then run activation again
+
+4) Install deps
+    pip install -U pip
+    pip install -r requirements.txt
+    # (devs) pip install -r requirements-dev.txt
+
+5) Run tests (optional)
+    pytest -q
+
+6) Run the tools
+    python -m test_framework.shell_cli
+    python -m test_framework.runner_cli
+
+Notes (Windows)
+    Serial ports: use COM3, COM4, … (not /dev/ttyUSB0).
+    SSH mode: requires paramiko (already in requirements.txt).
+    .sh scripts: won’t run natively; use Python entry points or run via WSL.
+
+🐧 WSL / Linux (Ubuntu)
+1) Clone
+    cd ~/projects
+    git clone https://github.com/BaisenSu/python_linux_test_platform.git
+    cd python_linux_test_platform
+
+2) Create venv (one time per machine)
+    python3 -m venv .venv
+
+3) Activate venv (every session)
+    source .venv/bin/activate
+
+4) Install deps
+    pip install -U pip
+    pip install -r requirements.txt
+    # (devs) pip install -r requirements-dev.txt
+
+5) Run tests (optional)
+    pytest -q
+
+6) Run the tools
+    python -m test_framework.shell_cli
+    python -m test_framework.runner_cli
+
+Notes (WSL/Linux)
+    Serial ports: /dev/ttyUSB0, /dev/ttyS0, etc.
+    Add permission once: sudo usermod -a -G dialout $USER (then log out/in).
+    SSH mode: works with paramiko.
+    Mock mode: use mode="mock" in SerialTalker if no hardware.
+
+🔁 Every time you reopen the project
+
+Windows:
+    cd C:\Users\baise\Documents\Python_Projects\python_linux_test_platform
+    .\.venv\Scripts\Activate
+
+WSL/Linux:
+    cd ~/projects/python_linux_test_platform
+    source .venv/bin/activate
+
+Then run:
+    pytest -q                # optional
+    python -m test_framework.shell_cli
+    python -m test_framework.runner_cli
+
+📦 Requirements
+
+requirements.txt (runtime):
+    rich~=13.7
+    pyserial~=3.5
+    paramiko~=3.4
+
+requirements-dev.txt (developers):
+    -r requirements.txt
+    pytest~=8.3
+
+🧯 Troubleshooting
+    PowerShell can’t run Activate.ps1: set execution policy (see Windows step 3).
+    Missing packages: run pip install -r requirements.txt.
+    Serial port not found: confirm device name (Windows: COMx; Linux: /dev/ttyUSB0) and permissions.

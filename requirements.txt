@@ -1,0 +1,4 @@
+# Core runtime deps
+rich~=13.7
+pyserial~=3.5
+paramiko~=3.4
